@@ -9,34 +9,36 @@
 <body>
     <h1>Lista interativa</h1>
     <div class="container">
-        <label id="tarefa" for="tarefaText">Tarefa</label>
-        <div>
-            <input type="text" id="tarefaText" class="form-control">
+        <div class="row">
+            <div class="col">
+                <div>
+                    <label id="tarefa" for="tarefaText">Tarefa</label>
+                    <input type="text" id="tarefaText" class="form-control">
+                </div>
+                <div>
+                    <label id="descricao" for="descricaoText">Descrição</label>
+                    <input type="text" id="descricaoText" class="form-control">
+                </div>
+                <br>
+                <button class="btn btn-primary" onclick="salvarTarefaDescricao()">Salvar</button>
+                <div>
+                    <p>Total de Tarefas: <span id="totalTarefas">0</span></p>
+                    <p>Tarefas Concluídas: <span id="tarefasConcluidas">0</span></p>
+                    <p>Tarefas Não Concluídas: <span id="tarefasNaoConcluidas">0</span></p>
+                </div>
+            </div>
+            <div class="col">
+                <table class="table table-striped" id="lista">
+                    <tr>
+                        <th>Tarefa</th>
+                        <th>Descrição</th>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <br>
-    </div>  
-    <div class="container">
-        <label id="descricao" for="descricaoText">Descrição</label>
-        <div>
-            <input type="text" id="descricaoText" class="form-control">
-        </div>
-        <br>
-        <button class="btn btn-primary" onclick="salvarTarefaDescricao()">Salvar</button>
     </div>
-    <div>
-        <p>Total de Tarefas: <span id="totalTarefas">0</span></p>
-        <p>Tarefas Concluídas: <span id="tarefasConcluidas">0</span></p>
-        <p>Tarefas Não Concluídas: <span id="tarefasNaoConcluidas">0</span></p>
-    </div> 
-    <br>
-    <div class="container">
-        <table class="table table-striped" id="lista">
-            <tr>
-                <th>Tarefa</th>
-                <th>Descrição</th>
-            </tr>
-        </table>
-    </div>
+    
+
     <script src='main.js'></script>
 </body>
 </html>

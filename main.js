@@ -27,18 +27,24 @@ function armazenaTarefaDescricao(tarefa, descricao) {
 
 //função para criar a lista de tarefas na tabela HTML
 function criarLista() {
-    let listaHTML = "<tr><th>Tarefa</th><th>Descrição</th><th>Ações</th></tr>";
-    for (let i = 0; i < tarefas.length; i++) {
-        let classe = tarefas[i].concluida ? "concluida" : "";
-        listaHTML += `
-        <tr>
-            <td>${tarefas[i].tarefa}</td>
-            <td>${tarefas[i].descricao}</td>
-                <td>
-                    <button class='btn btn-success' onclick='concluir(${i})'>Concluir</button>
-                    <button class='btn btn-danger' onclick='excluir(${i})'>Excluir</button>
-                </td>
-        </tr>`;
+    let listaHTML = '<tr><th>Tarefa</th><th>Descrição</th><th>Ações</th></tr>';
+
+    if (tarefas.length === 0) {
+        listaHTML += '<tr><td coldspan= "3" style=text-align: center; padding: 20px;">Nenhuma tarefa ainda</td></tr>';
+    }
+    else{
+        for (let i = 0; i < tarefas.length; i++) {
+            let classe = tarefas[i].concluida ? "concluida" : "";
+            listaHTML += `
+            <tr>
+                <td>${tarefas[i].tarefa}</td>
+                <td>${tarefas[i].descricao}</td>
+                    <td>
+                        <button class='btn btn-success' onclick='concluir(${i})'>Concluir</button>
+                        <button class='btn btn-danger' onclick='excluir(${i})'>Excluir</button>
+                    </td>
+            </tr>`;
+        }
     }
     document.getElementById("lista").innerHTML = listaHTML;
 }
