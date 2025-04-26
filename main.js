@@ -1,43 +1,41 @@
-//função para salva a tarefa e descrição
-
-function salvarTarefaDescricao() {
+function preencher() {
     let task = document.getElementById('tarefaText').value;
     let description = document.getElementById('descricaoText').value;
 
-    // Verifica se o campo de tarefa está vazio e retorna um alerta
+    //verifica se o campo de tarefa está vazio e retorna um alerta
     if(tarefa.trim() === "") {
         alert("Por favor, preencha o nome da tarefa.");
         return; 
     }
 }
 
-//declara array
+//feclara array
 var tarefas = [];
-// Função para salvar a tarefa e descrição (acionada por um evento, por exemplo, um clique de botão)
+//função para salvar a tarefa e descrição
 function salvarTarefaDescricao() {
     let taskInput = document.getElementById('tarefaText');
     let descriptionInput = document.getElementById('descricaoText');
     let tarefa = taskInput.value;
     let descricao = descriptionInput.value;
-    // Verifica se o campo de tarefa está vazio e retorna um alerta
+    //verifica se o campo de tarefa está vazio e retorna um alerta
     if (tarefa.trim() === "") {
         alert("Por favor, preencha o nome da tarefa.");
         return;
     }
-    // Chama a função para armazenar a tarefa e descrição
+    //chama a função para armazenar a tarefa e descrição
     armazenaTarefaDescricao(tarefa, descricao);
-    // Limpa os campos de input após salvar
+    //limpa os campos de input após salvar
     taskInput.value = "";
     descriptionInput.value = "";
 }
 
-// Função para armazenar a tarefa e descrição no array
+//função para armazenar a tarefa e descrição no array
 function armazenaTarefaDescricao(tarefa, descricao) {
     tarefas.push({ tarefa: tarefa, descricao: descricao });
-    criarLista(); // Chama criarLista para atualizar a exibição
+    criarLista(); //chama criarLista para atualizar a exibição
 }
 
-// Função para criar a lista de tarefas na tabela HTML
+//função para criar a lista de tarefas na tabela HTML
 function criarLista() {
     let listaHTML = "<tr><th>Tarefa</th><th>Descrição</th><th>Ações</th></tr>";
     for (let i = 0; i < tarefas.length; i++) {
@@ -46,8 +44,8 @@ function criarLista() {
     document.getElementById("lista").innerHTML = listaHTML;
 }
 
-// Função para remover a tarefa
+//função para remover a tarefa
 function excluir(index) {
     tarefas.splice(index, 1);
-    criarLista(); // Atualiza a lista após a exclusão
+    criarLista(); //atualiza a lista após a exclusão
 }
