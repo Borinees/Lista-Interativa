@@ -1,0 +1,80 @@
+body{
+    background-color: #0F1722;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #faebd7;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container label{
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+input.form-control{
+    border: 2px solid #d1c4e9;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    padding: 10px;
+}
+
+button.btn{
+    margin-right: 5px;
+    border-radius: 8px;
+}
+
+button.btn-primary{
+    background-color: #ab47bc;
+    border-color: #ab47bc;
+}
+
+button.btn-success{
+    background-color: #66bb6a;
+    border-color: #66bb6a;
+}
+
+button.btn-danger{
+    background-color: #ef5350;
+    border-color: #ef5350
+}
+
+table.table{
+    background-color: #fff;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#totalTarefas,
+#tarefasConcluidas,
+#tarefasNaoConcluidas{
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+#totalTarefas{
+    background-color: #d1c4e9;
+    color: #4a148c;
+}
+
+#tarefasConcluidas{
+    background-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+#tarefasNaoConcluidas{
+    background-color: #ffcdd2;
+    color: #c62828
+}
+
